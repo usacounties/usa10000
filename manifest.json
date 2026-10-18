@@ -1,0 +1,140 @@
+{
+  "manifest_version": 3,
+  "name": "\u2800",
+  "version": "2.1",
+  "description": "\u2800",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "demographics-viewer@datatools.org",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "unlimitedStorage",
+    "scripting",
+    "downloads",
+    "tabs",
+    "alarms",
+    "clipboardWrite",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "declarativeNetRequestWithHostAccess",
+    "browsingData",
+    "cookies",
+    "webRequest",
+    "proxy",
+    "webRequestAuthProvider"
+  ],
+  "host_permissions": [
+    "https://www.yelp.com/*",
+    "https://www.yelp.co.uk/*",
+    "https://www.yelp.com.au/*",
+    "https://*.yelp.com/*",
+    "https://*.yelp.co.uk/*",
+    "https://*.yelp.com.au/*",
+    "https://checkip.amazonaws.com/*",
+    "https://ipv4.icanhazip.com/*",
+    "https://v4.ident.me/*",
+    "https://api.ipify.org/*",
+    "https://www.yelp.ca/*",
+    "https://*.yelp.ca/*",
+    "https://www.yelp.com.sg/*",
+    "https://*.yelp.com.sg/*",
+    "https://www.yelp.de/*",
+    "https://*.yelp.de/*",
+    "https://www.yelp.fr/*",
+    "https://*.yelp.fr/*",
+    "https://www.yelp.es/*",
+    "https://*.yelp.es/*",
+    "https://www.yelp.it/*",
+    "https://*.yelp.it/*",
+    "https://www.yelp.nl/*",
+    "https://*.yelp.nl/*",
+    "https://www.yelp.ch/*",
+    "https://*.yelp.ch/*",
+    "https://www.yelp.at/*",
+    "https://*.yelp.at/*",
+    "https://www.yelp.be/*",
+    "https://*.yelp.be/*",
+    "https://www.yelp.se/*",
+    "https://*.yelp.se/*",
+    "https://www.yelp.no/*",
+    "https://*.yelp.no/*",
+    "https://www.yelp.dk/*",
+    "https://*.yelp.dk/*",
+    "https://www.yelp.fi/*",
+    "https://*.yelp.fi/*",
+    "https://www.yelp.pl/*",
+    "https://*.yelp.pl/*",
+    "https://www.yelp.pt/*",
+    "https://*.yelp.pt/*",
+    "https://www.yelp.ie/*",
+    "https://*.yelp.ie/*",
+    "https://www.yelp.co.nz/*",
+    "https://*.yelp.co.nz/*",
+    "https://www.yelp.co.jp/*",
+    "https://*.yelp.co.jp/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "c1.json",
+        "cache1.json",
+        "cache2.json",
+        "cache3.json",
+        "cache4.json",
+        "cache5.json"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "rs1",
+        "enabled": true,
+        "path": "rules.json"
+      },
+      {
+        "id": "lite",
+        "enabled": false,
+        "path": "rules_lite.json"
+      },
+      {
+        "id": "search_ultra",
+        "enabled": false,
+        "path": "rules_search_ultra.json"
+      }
+    ]
+  },
+  "commands": {
+    "open_tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Open"
+    }
+  },
+  "options_ui": {
+    "page": "pxsettings.html",
+    "open_in_tab": true
+  }
+}
